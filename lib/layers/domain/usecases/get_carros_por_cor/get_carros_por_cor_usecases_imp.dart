@@ -10,6 +10,12 @@ class GetCarrosPorCorUseCaseImp implements GetCarrosPorCorUseCase {
         quantidadeDePortas: 4,
         valor: 60000.00,
       );
+    } else if (cor.contains('azul')) {
+      return CarroEntity(
+        placa: 'GFS2158',
+        quantidadeDePortas: 6,
+        valor: 60000.00,
+      );
     } else {
       return CarroEntity(
         placa: 'DFG123',

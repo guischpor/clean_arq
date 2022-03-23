@@ -1,7 +1,7 @@
 class CarroEntity {
-  final String placa;
-  final int quantidadeDePortas;
-  final double valor;
+  String placa;
+  int quantidadeDePortas;
+  double valor;
 
   CarroEntity({
     required this.placa,
@@ -15,7 +15,7 @@ class CarroEntity {
 
   setValor() {
     if (valorReal > 10000.00) {
-      valor * 2;
+      valor *= 2;
     }
   }
 }
