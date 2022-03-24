@@ -1,4 +1,4 @@
-import 'package:clean_arq/teste/implements/animal_implements.dart';
+import 'package:clean_arq/testando/implements/animal_implements.dart';
 
 class PassaroImplements implements AnimalImplements {
   @override

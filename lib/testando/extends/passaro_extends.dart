@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:clean_arq/teste/extends/animal_extends.dart';
+import 'package:clean_arq/testando/extends/animal_extends.dart';
 
 class PassaroExtends extends AnimalExtends {
   @override
