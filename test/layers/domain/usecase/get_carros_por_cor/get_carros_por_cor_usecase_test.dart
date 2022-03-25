@@ -14,8 +14,11 @@ main() {
     ));
 
     var result = useCase('azul');
+    late CarroEntity resultExpect;
 
-    expect(result, isInstanceOf<CarroEntity>());
+    result.fold((l) => null, (r) => resultExpect = r);
+
+    expect(resultExpect, isInstanceOf<CarroEntity>());
   });
 
   test('Deve retornar um carro de 4 portas quando vermelho', () {
@@ -26,8 +29,11 @@ main() {
     );
 
     var result = useCase('vermelho');
+    late CarroEntity resultExpect;
 
-    expect(result.quantidadeDePortas, 4);
+    result.fold((l) => null, (r) => resultExpect = r);
+
+    expect(resultExpect.quantidadeDePortas, 4);
   });
 
   test(
@@ -41,6 +47,10 @@ main() {
 
     var result = useCase('preto');
 
-    expect(result.quantidadeDePortas, 2);
+    late CarroEntity resultExpect;
+
+    result.fold((l) => null, (r) => resultExpect = r);
+
+    expect(resultExpect.quantidadeDePortas, 2);
   });
 }
